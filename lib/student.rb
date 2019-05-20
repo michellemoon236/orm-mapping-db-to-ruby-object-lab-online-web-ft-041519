@@ -43,7 +43,7 @@ class Student
       #returns an array of all students in grades 9 (FAILED - 1)
   def self.students_below_12th_grade
       #returns an array of all students in grades 11 or below (FAILED - 2)
-    .all
+  def self.all
       #returns all student instances from the db
     .first_X_students_in_grade_10
       #returns an array of the first X students in grade 10 (FAILED - 3)
