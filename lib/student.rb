@@ -3,6 +3,7 @@ class Student
 
   def self.new_from_db(row)
     # create a new Student object given a row from the database
+    
     student = self.new
     student.id = row[0]
     student.name = row[1]
@@ -13,6 +14,7 @@ class Student
   def self.all
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
+    
     sql = <<-SQL
       SELECT *
       FROM students 
@@ -40,7 +42,7 @@ class Student
   end
   
   def self.all_students_in_grade_9
-      #returns an array of all students in grades 9 (FAILED - 1)
+    #returns an array of all students in grades 9 (FAILED - 1)
     sql = <<-SQL
       SELECT *
       FROM students
@@ -53,7 +55,8 @@ class Student
   end
   
   def self.students_below_12th_grade
-      #returns an array of all students in grades 11 or below (FAILED - 2)
+    #returns an array of all students in grades 11 or below (FAILED - 2)
+    
     sql = <<-SQL
       SELECT *
       FROM students
@@ -66,7 +69,8 @@ class Student
   end
   
   def self.first_X_students_in_grade_10(number)
-      #returns an array of the first X students in grade 10 (FAILED - 3)
+    #returns an array of the first X students in grade 10 (FAILED - 3)
+    
     sql = <<-SQL
       SELECT *
       FROM students
@@ -80,7 +84,8 @@ class Student
   end
   
   def self.first_student_in_grade_10
-      #returns the first student in grade 10 (FAILED - 4)
+    #returns the first student in grade 10 (FAILED - 4)
+    
     sql = <<-SQL
       SELECT *
       FROM students
@@ -93,7 +98,8 @@ class Student
   end
   
   def self.all_students_in_grade_X(grade)
-      #returns an array of all students in a given grade X (FAILED - 5)
+    #returns an array of all students in a given grade X (FAILED - 5)
+    
     sql = <<-SQL
       SELECT *
       FROM students
